@@ -2,4 +2,4 @@ pessoa = {
     'nome': 'Luiz',
 }
 
-print(pessoa[0])
+print(pessoa)
