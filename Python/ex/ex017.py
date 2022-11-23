@@ -18,3 +18,11 @@ print(
         2, 4
     )
 )
+
+#duplica = cria_multiplicador(2)
+duplica = executa(
+    lambda multiplicador: lambda numero: numero * multiplicador,
+    2
+)
+
+print(duplica(5))
