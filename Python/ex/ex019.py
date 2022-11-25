@@ -1,4 +1,4 @@
-'''lista = []
+lista = []
 for numero in range(10):
     lista.append(numero)
 print(lista)
@@ -15,7 +15,7 @@ lista_2 = [
 ]
 
 print(lista_2)
-'''
+
 produtos = [
     {'dicionario': 'p1', 'preco': 20},
     {'dicionario': 'p2', 'preco': 30},
@@ -48,3 +48,13 @@ novos_produtos_caso_o_preco_for_maior = [
 print('-'*30)
 print('-'*30)
 print(*novos_produtos_caso_o_preco_for_maior, sep='\n')
+print('-'*30)
+print('-'*30)
+
+novos_produtos_com_filtro = [
+    {**produto, 'dicionario': produto['dicionário']}
+    if produto['dicionario'] == 'p1' else {**produto}
+    for produto in produtos
+]
+
+print(*novos_produtos_com_filtro, end='\n')
