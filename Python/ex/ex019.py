@@ -58,3 +58,18 @@ novos_produtos_com_filtro = [
 ]
 
 print(*novos_produtos_com_filtro, end='\n')
+
+lista_produtos_mercado = [
+    {'Produto': 'Açai', 'preco': 10},
+    {'Produto': 'Banana', 'preco': 5},
+    {'Produto': 'Uva', 'preco': 3},
+    {'Produto': 'Leite', 'preco': 2.50}
+]
+
+novos_produtos = [
+    {**produto, 'preco': produto['preco'] * 1.10} if produto['preco'] > 4.50 else {**produto}
+    for produto in lista_produtos_mercado
+    if produto['preco'] * 1.10 > 5
+]
+
+print(*novos_produtos, end='\n')
