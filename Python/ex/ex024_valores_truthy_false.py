@@ -13,3 +13,11 @@ def falsy(valor):
     return 'falsy' if not valor else 'thuthy'
 
 print(f'TESTE', falsy('TESTE'))
+
+string = 'Lucas'
+
+if hasattr(string, 'upper'):
+    print('Tem o método upper')
+    print(string.upper())
+
+metodo = 'upper'
