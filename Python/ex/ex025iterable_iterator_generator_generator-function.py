@@ -29,5 +29,5 @@ def generator(n=0, maximum=10):
 gen = generator(maximum=3)
 print(next(gen))
 print(next(gen))
-print(next(gen))print(next(gen))
+print(next(gen))
 print('minha irmã é muito linda, tenho outra irmã que é feia, que é a a myisabella')  
