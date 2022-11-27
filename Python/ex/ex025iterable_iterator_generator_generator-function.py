@@ -2,8 +2,7 @@ iterable = ['Eu', 'Tenho', '__iter__'] ##iterável
 iterator = iter(iterable) ##tem o __iter__ e __next__
 print(next(iterator))
 print(next(iterator))
-print(next(iterator))
-print(next(iterator))
+
 
 #generator
 import sys
@@ -19,14 +18,15 @@ for num in generator:
     print(num)
 
 ##Generator Function
-def generator(n=0, num=0):
+def generator(n=0, maximum=10):
     while True:
-        if n == num:
+        if n == maximum:
             return 'Acabou'
             break
         yield n
         n += 1
 
-gen = generator(10)
-for n in gen:
-    print(n)
+gen = generator(maximum=3)
+print(next(gen))
+print(next(gen))
+print(next(gen))
