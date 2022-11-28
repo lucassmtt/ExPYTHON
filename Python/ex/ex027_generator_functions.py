@@ -13,3 +13,9 @@ def gen2():
 g = gen2()
 for numero in g:
     print(numero)
+
+
+try:
+    print('Hello')
+except:
+    print('Hi, world')
