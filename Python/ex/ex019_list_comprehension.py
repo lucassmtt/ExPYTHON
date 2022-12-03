@@ -52,7 +52,7 @@ print('-'*30)
 print('-'*30)
 
 novos_produtos_com_filtro = [
-    {**produto, 'dicionario': produto['dicionário']}
+    {**produto, 'dicionario': produto['dicionario']}
     if produto['dicionario'] == 'p1' else {**produto}
     for produto in produtos
 ]
