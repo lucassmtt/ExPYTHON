@@ -1,15 +1,14 @@
-def soma(x, y):
-    return x + y
+def soma(x, *args):
+    res = 0
+    for c in args:
+        res += c
+    return res + x
 
+def multiplica(x, *args):
+    res = 1
+    for c in args:
+        res *= c
+    return res * x
 
-def multiplica(x, y):
-    return x * y
-
-def criar_funcao(funcao, x):
-    def interna(y):
-        return funcao(x, y)
-    return interna
-
-soma_com_cinco = criar_funcao(soma, 5)
-multiplicador_por_dez = criar_funcao(multiplica, 10)
-print(soma_com_cinco(3))
+def criar_funcao(funcao, *args):
+    def interna
