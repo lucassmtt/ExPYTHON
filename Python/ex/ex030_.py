@@ -11,4 +11,10 @@ def multiplica(x, *args):
     return res * x
 
 def criar_funcao(funcao, *args):
-    def interna
+    x = args[0]
+    def interna(*args):
+        funcao(x, args)
+    return interna
+
+multiplica_por_dez = criar_funcao(multiplica, 10)
+print(multiplica_por_dez)
