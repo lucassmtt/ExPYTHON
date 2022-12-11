@@ -21,3 +21,7 @@ for chave, grupo in grupos:
     for aluno in grupo:
         print(aluno)
     print('-'*40)
+
+print(lista_correta)
+print(grupos)
+print(list(grupos))
