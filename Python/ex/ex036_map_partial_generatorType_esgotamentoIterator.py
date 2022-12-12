@@ -1,5 +1,6 @@
-import functools
-
+from functools import partial
+def print_list(list_value):
+    return print(list(list_value))
 produtos = [
     {'nome': 'Produto1', 'preco': 10},
     {'nome': 'Produto2', 'preco': 30},
@@ -7,26 +8,26 @@ produtos = [
     {'nome': 'Produto4', 'preco': 100},
 ]
 
-def print_listas(lista):
-    print(list(lista))
+def porcent_value(value, porcent):
+    return round(value * porcent)
 
 
-def regulation_value(produtos, porcentagem):
-    return round(produtos * porcentagem)
+aumentar_preco_em_dez_porcento = partial(
+    porcent_value, 1.10
+)
 
-
-novos_produtos = [
-    {**produto, 'preco': regulation_value(produto['preco'], 3)}
-    for produto in produtos
+novos_produtos_com_aumento = [
+    {**p, 'preco': aumentar_preco_em_dez_porcento(p['preco'])}
+    for p in produtos
 ]
 
-#print(list(novos_produtos))
+def change_in_product(product):
+    return {**product, 'preco': aumentar_preco_em_dez_porcento(product['preco'])}
 
 
-novos_produtos_com_dez_por_cento_de_desconto = [
-    {**produto, 'preco': regulation_value(produto['preco'], 0.9)}
-    for produto in produtos
-]
+novos_produtos_com_map = map(
+    change_in_product, produtos
+)
 
-print_listas(novos_produtos_com_dez_por_cento_de_desconto)
+
 
