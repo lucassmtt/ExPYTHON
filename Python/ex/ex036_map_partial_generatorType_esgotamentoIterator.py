@@ -1,4 +1,5 @@
 from functools import partial
+
 def print_list(list_value):
     return print(list(list_value))
 produtos = [
@@ -29,5 +30,9 @@ novos_produtos_com_map = map(
     change_in_product, produtos
 )
 
+novos_produtos_com_filtro = filter(
+    lambda p: p['preco'] > 10,
+    produtos
+)
 
-
+print_list(novos_produtos_com_filtro)
