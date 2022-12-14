@@ -1,0 +1,30 @@
+[
+  {
+    "nome": "Maria",
+    "sobrenome": "Vieira",
+    "idade": 19,
+    "ativo": false,
+    "notas": [
+      "A",
+      "A+"
+    ],
+    "telefones": {
+      "residencial": "48 34343434",
+      "celular": "47 988432132"
+    }
+  },
+  {
+    "nome": "Joao",
+    "sobrenome": "Roberto",
+    "idade": 44,
+    "ativo": true,
+    "notas": [
+      "B",
+      "B+"
+    ],
+    "telefones": {
+      "resdiencial": "47 34343642",
+      "celular": "48 986424221"
+    }
+  }
+]
