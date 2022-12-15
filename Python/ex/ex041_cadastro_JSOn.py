@@ -25,9 +25,13 @@ cont_id = 0
 pessoas = {}
 resp = 0
 
-contador = 0
-with open('ex041_cadastro_usando.json', 'r') as arquivo:
-    info = json.load(arquivo)
+with open('ex041_cadastro_usando_json_identifier.json', 'r+') as arquivo:
+    lendo = arquivo.readlines()
+    for i in lendo:
+        if i.isnumeric():
+            i = int(i)
+            identificador = i
+
 
 while resp != 3:
     print('Digite o número para fazer alguma operação...')
@@ -59,9 +63,9 @@ while resp != 3:
         pessoa.setdefault('nome', nome)
         pessoa.setdefault('idade', idade)
         pessoa.setdefault('notas', notas)
-        pessoas.setdefault(f'pessoa_id_{cont_id}', pessoa)
+        pessoas.setdefault(f'pessoa_id_{identificador}', pessoa)
         pessoa = {}
-        cont_id += 1
+        identificador += 1
     if resp == 2:
         while True:
             login = input('Digite seu login de administrador: ')
@@ -71,5 +75,10 @@ while resp != 3:
                     print(json.load(arquivo))
                 break
 
-with open('ex041_cadastro_usando.json', 'w+') as arquivo:
+with open('ex041_cadastro_usando.json', 'a+') as arquivo:
     json.dump(pessoas, arquivo, ensure_ascii=False, indent=2)
+
+
+with open('ex041_cadastro_usando_json_identifier.json', 'w') as arquivo:
+    json.dump(identificador, arquivo)
+print(identificador)
