@@ -24,8 +24,8 @@ def underline(n):
 cont_id = 0
 pessoas = {}
 resp = 0
-
-with open('ex041_cadastro_usando_json_identifier.json', 'r+') as arquivo:
+pessoa = {}
+with open('ex041_contador_id.json', 'r+') as arquivo:
     lendo = arquivo.readlines()
     for i in lendo:
         if i.isnumeric():
@@ -34,6 +34,7 @@ with open('ex041_cadastro_usando_json_identifier.json', 'r+') as arquivo:
 
 
 while resp != 3:
+    pessoa = {}
     print('Digite o número para fazer alguma operação...')
     print('''
         1 == Cadastrar novas pessoas
@@ -43,7 +44,6 @@ while resp != 3:
     ''')
     resp = is_number(': ')
     if resp == 1:
-        pessoa = {}
         nome = is_string('Digite seu nome: ', aviso='Digite seu nome corretamente, por favor: ')
         idade = is_number('Digite sua idade', aviso='Digite sua idade corretamente, por favor: ')
         numero_notas = is_number('Quantas notas você teve? ')
@@ -64,21 +64,21 @@ while resp != 3:
         pessoa.setdefault('idade', idade)
         pessoa.setdefault('notas', notas)
         pessoas.setdefault(f'pessoa_id_{identificador}', pessoa)
-        pessoa = {}
         identificador += 1
+        with open('ex041_cadastro_usando.json', 'a+') as arquivo:
+            json.dump(pessoas, arquivo, ensure_ascii=False, indent=2)
+
+        pessoas = {}
     if resp == 2:
         while True:
             login = input('Digite seu login de administrador: ')
             senha = input('Digite sua senha...')
             if login == 'MOTTA' and senha == '12345678':
-                with open('ex041_cadastro_usando.json', 'r') as arquivo:
-                    print(json.load(arquivo))
+                with open('ex041_cadastro_usando.json', 'r+') as arquivo:
+                    arquivo_aberto = arquivo.readlines()
+                    print(*arquivo_aberto, sep='\n')
                 break
 
-with open('ex041_cadastro_usando.json', 'a+') as arquivo:
-    json.dump(pessoas, arquivo, ensure_ascii=False, indent=2)
-
-
-with open('ex041_cadastro_usando_json_identifier.json', 'w') as arquivo:
+with open('ex041_contador_id.json', 'w') as arquivo:
     json.dump(identificador, arquivo)
 print(identificador)

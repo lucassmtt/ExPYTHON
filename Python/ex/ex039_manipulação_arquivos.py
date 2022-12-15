@@ -23,3 +23,6 @@ import os
 #     arquivo.write('Linha 3\n')
 #     arquivo.write('Linha 4\n')
 
+with open('ex041_contador_id.json', 'r+') as arquivo:
+    pessoa = json.load(arquivo)
+    print(pessoa)
