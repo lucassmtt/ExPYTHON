@@ -21,6 +21,7 @@ def desfazer(tarefas, tarefas_refazer):
 
     tarefa = tarefas.pop()
     tarefas_refazer.append(tarefa)
+    listar(tarefas)
 
 
 def refazer(tarefas, tarefas_refazer):
@@ -30,48 +31,74 @@ def refazer(tarefas, tarefas_refazer):
 
     tarefa = tarefas_refazer.pop()
     tarefas.append(tarefa)
+    listar(tarefas)
 
 
 def adicionar(tarefa, tarefas):
-    tarefa = tarefa.strip()
     if not tarefa:
         print('Você não diigitou nenhuma tarefa')
         return
 
     tarefas.append(tarefa)
-    return
+    listar(tarefas)
+
 
 
 def underline(n):
     return print('-'*n)
 
 
+# while True:
+#     print('COMANDOS: Listar, Desfazer, Refazer')
+#     tarefa = input('Digite um comando ou uma tarefa para fazer: ')
+#
+#     if tarefa == 'listar':
+#         underline(30)
+#         listar(tarefas)
+#         underline(30)
+#
+#     elif tarefa == 'desfazer':
+#         desfazer(tarefas, tarefas_refazer)
+#         underline(30)
+#         listar(tarefas)
+#         underline(30)
+#
+#     elif tarefa == 'refazer':
+#         refazer(tarefas, tarefas_refazer)
+#         underline(30)
+#         listar(tarefas)
+#         underline(30)
+#
+#     elif tarefa == 'clear':
+#         os.system('clear')
+#
+#     else:
+#         adicionar(tarefa, tarefas)
+#         underline(30)
+#         listar(tarefas)
+#         underline(30)
+
+#fazer desta outra forma
 while True:
-    print('COMANDOS: Listar, Desfazer, Refazer')
-    tarefa = input('Digite um comando ou uma tarefa para fazer: ')
+    print('Comandos: listar, desfazer, refazer, clear(limpar) ')
+    tarefa = input('Digite um comando ou uma tarefa: ')
 
-    if tarefa == 'listar':
-        underline(30)
-        listar(tarefas)
-        underline(30)
+    comandos = {
+        'listar': lambda: listar(tarefas),
+        'desfazer': lambda: desfazer(tarefas, tarefas_refazer),
+        'refazer': lambda: refazer(tarefas, tarefas_refazer),
+        'clear': lambda: os.system('clear'),
+        'adicionar': lambda: adicionar(tarefa, tarefas)
 
-    elif tarefa == 'desfazer':
-        desfazer(tarefas, tarefas_refazer)
-        underline(30)
-        listar(tarefas)
-        underline(30)
+    }
+    # if comandos.get(tarefa) is not None:
+    #     comando = comandos.get(tarefa)
+    #     comando()
+    # else:
+    #     comando = comandos['adicionar']
+    #     comando()
 
-    elif tarefa == 'refazer':
-        refazer(tarefas, tarefas_refazer)
-        underline(30)
-        listar(tarefas)
-        underline(30)
+    #Ou desta forma
 
-    elif tarefa == 'clear':
-        os.system('clear')
-
-    else:
-        adicionar(tarefa, tarefas)
-        underline(30)
-        listar(tarefas)
-        underline(30)
+    comando = comandos.get(tarefa) if comandos.get(tarefa) is not None else comandos['adicionar']
+    comando()
