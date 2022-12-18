@@ -13,13 +13,21 @@
 # print(p2.nome)
 # print(p2.sobrenome)
 
-class Carro:
-    def __init(self, cor, modelo, ano):
-        self.cor = cor
-        self.modelo = modelo
-        self.ano = ano
+# class Carro:
+#     def __init__(self, nome, modelo, ano):
+#         self.nome = nome
+#         self.modelo = modelo
+#         self.ano = ano
+#
+#
+# carro_do_lucas = Carro('Fusca', 'Hetch', 1998)
+#
+# print(carro_do_lucas.nome)
+# print()
+# print(carro_do_lucas.modelo)
+# print()
+# print(carro_do_lucas.ano)
 
 
-carro01 = Carro('Amarelo', 'hetch', '1998')
-
-print(carro01.Amarelo)
+class Caneta:
+    def __init__(self):
