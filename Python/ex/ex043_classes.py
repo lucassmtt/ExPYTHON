@@ -29,5 +29,40 @@
 # print(carro_do_lucas.ano)
 
 
-class Caneta:
-    def __init__(self):
+# class Caneta:
+#     def __init__(self):
+class Camera:
+    def __init__(self, nome, filmando=False):
+        self.nome = nome
+        self.filmando = filmando
+
+    def filmar_desligar(self, desligar=False):
+        if desligar:
+            print(f'{self.nome} desligando...')
+            self.filmando = False
+            print(f'{self.nome} desligada!')
+            return
+        elif self.filmando:
+            print(f'{self.nome} ja está filmando')
+            return
+        else:
+            print(f'{self.nome} está filmando...')
+            self.filmando = True
+
+    def fotografar(self):
+        if self.filmando:
+            print(f'É impossível fotografar enquanto está gravando')
+            return
+
+        print(f'{self.nome} está fotografando...')
+
+c1 = Camera('Canon')
+c2 = Camera('Philco')
+
+c1.filmar_desligar()
+print()
+c1.fotografar()
+print()
+c1.filmar_desligar(desligar=True)
+print()
+c1.fotografar()
