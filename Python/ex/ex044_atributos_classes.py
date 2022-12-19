@@ -17,8 +17,6 @@ pessoa_02 = Pessoa('João', 24)
 # print(pessoa_02.get_ano_nascimento())
 # print(Pessoa.ANO_ATUAL)
 
-print(vars(pessoa_01))
-
-pessoa_01.__dict__['nome'] = 'José'
-
+print(pessoa_01.__dict__)
+print()
 print(vars(pessoa_01))
