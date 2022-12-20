@@ -1,5 +1,7 @@
-{
-  "nome": "Cannon",
-  "fotografando": false,
-  "filmando": true
-}
+[
+  {
+    "nome": "Cannon",
+    "fotografando": true,
+    "filmando": false
+  }
+]

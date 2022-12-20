@@ -63,6 +63,6 @@ class Camera:
 
 
 camera_lucas = Camera('Cannon')
-camera_lucas.filmar()
+camera_lucas.fotografar()
 
-salvar_criar(CAMINHO_ARQUIVO, camera_lucas.__dict__)
+salvar_criar(CAMINHO_ARQUIVO, [vars(camera_lucas)])
