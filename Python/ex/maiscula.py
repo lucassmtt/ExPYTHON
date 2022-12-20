@@ -1,0 +1,4 @@
+string = 'Joined July 2022 DIREITO ADMINISTRATIVO• Processos administrativos disciplinares;• Acompanhamento de Processos Administrativos Disciplinares, Sindicância, Inquérito Administrativo ou de qualquer outra natureza, seja em situações envolvendo servidores civis ou militares;• Anulação de Demissão Ilegal;• Ações de Reintegração ao Cargo Público de Servidores Exonerados;• Anulação de Atos Administrativos;• Demissão de Servidor Público por Ato de Improbidade Administrativa;• Reprovação em exame médico e avaliação psicológicaDIREITO CRIMINAL • Defesa em delegacia de Polícia (flagrante delito);• Defesa em processos Criminais;• Impetração de habeas corpus;• Sustentação oral em Tribunal;• Audiência de custódia; • Defesa em Ação Penal • Trancamento de ação penal • Recursos Criminais para TJ'
+
+string_nova = string.upper()
+print(string_nova)
