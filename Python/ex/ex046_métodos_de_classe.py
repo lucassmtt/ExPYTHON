@@ -39,6 +39,3 @@
 # print(cliente_01.password)
 
 
-class Caneta:
-    def __init__(self):
-        n
