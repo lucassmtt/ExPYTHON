@@ -20,4 +20,4 @@ class Endereco:
 
 cliente_01 = Cliente('Lucas Motta')
 cliente_01.add_endereco('Rua Jacobi', 232)
-del cliente_01
+
