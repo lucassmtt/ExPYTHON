@@ -22,9 +22,9 @@ class Produto:
         self.preco = preco_produto
 
 
-carrinho = Carrinho()
-p1, p2, p3 = Produto('Caneta',2), Produto('Camiseta', 50), Produto('Carregador', 20)
-carrinho.add_produtos(p1, p2, p3)
-carrinho.listar_valor_produtos()
-print()
-carrinho.total()
+carrinho_de_compra01 = Carrinho()
+caneta = Produto('Caneta Bic', 3)
+
+
+carrinho_de_compra01.add_produtos(caneta)
+print(carrinho_de_compra01.total())
