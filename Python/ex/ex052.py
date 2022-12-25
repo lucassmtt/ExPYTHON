@@ -21,7 +21,7 @@
 # # aluno_01.falar_nome_classe()
 #
 # help(Aluno)
-
+#
 # class MinhaString(str):
 #     def upper(self):
 #         print('Chamada upper com o super()')
@@ -32,20 +32,20 @@
 # string = MinhaString('Minha nova string')
 #
 # print(string.upper())
-
-class A(object):
-    def metodo(self):
-        print('A')
-
-class B(A):
-    def metodo(self):
-        print('B')
-        return super(A, self)
-
-class C(B):
-    def metodo(self):
-        return super(B, self)
-
-
-C = C()
-print(C.metodo())
+#
+# class A(object):
+#     def metodo(self):
+#         print('A')
+#
+# class B(A):
+#     def metodo(self):
+#         print('B')
+#         return super(A, self)
+#
+# class C(B):
+#     def metodo(self):
+#         return super(B, self)
+#
+#
+# C = C()
+# print(C.metodo())
