@@ -18,15 +18,12 @@ class Conta:
 
 
 class ContaCorrente(Conta):
-    def __init__(self, numero_agencia, numero_conta, saldo):
-        self.agencia = numero_agencia
-        self.conta = numero_conta
-        self.saldo = saldo
-
+    ...
 
 
 class ContaPoupanca(Conta):
     ...
+
 
 class Pessoa:
     def __init__(self, nome, sobrenome, idade):
@@ -46,10 +43,9 @@ class Pessoa:
     def idade(self):
         return self._idade
 class Cliente(Pessoa):
-    def __init__(self, nome, sobrenome, idade):
-        self.nome = nome
-        self.sobrenome = sobrenome
-        self.idade = idade
+    ...
 
-
-
+lucas = Cliente('Lucas', 'Motta', 18)
+print(lucas.nome)
+print(lucas.sobrenome)
+print(lucas.idade)
