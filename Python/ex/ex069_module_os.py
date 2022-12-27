@@ -33,4 +33,4 @@ for pasta in os.listdir(caminho):
         print('*********',pasta_interna)
         print('-'*20)
 
-
+os.unlink(caminho)
