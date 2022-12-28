@@ -9,5 +9,7 @@ ABSOLUTO = os.path.abspath(
     )
 )
 
+
+print(__file__,'file')
 print(NOME_ARQ)
 print(ABSOLUTO)
