@@ -1,1 +1,3 @@
-from itertools im
+import os
+
+caminho = 
