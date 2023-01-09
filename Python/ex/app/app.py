@@ -3,7 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 
 ROOT = Path(__file__).parent.parent.parent.parent
-CHROME_DRIVER_PATH = ROOT / 'venv' / 'bin' / 'chromedriver'
+CHROME_DRIVER_PATH = 'c'
 
 def make_chrome_browser(*options: str) -> webdriver.Chrome:
     chrome_options = webdriver.ChromeOptions()
