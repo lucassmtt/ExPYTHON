@@ -1,12 +1,12 @@
 from pathlib import Path
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chromium.service import ChromiumService
 
 ROOT = Path(__file__).parent.parent.parent.parent
-CHROME_DRIVER_PATH = 'c'
+CHROME_DRIVER_PATH = 'chromedriver'
 
 def make_chrome_browser(*options: str) -> webdriver.Chrome:
-    chrome_options = webdriver.ChromeOptions()
+    chrome_options = webdriver.ChromiumEdge
 
 
     #chrome_options.add_argument('--headless')
