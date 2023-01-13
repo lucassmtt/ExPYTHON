@@ -7,7 +7,7 @@
   "terminal.integrated.fontSize": 18,
   "editor.rulers": [80, 120],
   "workbench.colorTheme": "GitHub Dark Colorblind (Beta)",
-  "workbench.iconTheme": "material-icon-theme",
+  "workbench.iconTheme": "simple-icons",
   "code-runner.executorMap": {
     "python": "clear ; python -u"
   },
