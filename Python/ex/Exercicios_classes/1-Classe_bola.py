@@ -1,3 +1,5 @@
+ # Crie uma classe que modele uma bola:
+
 class Bola:
     def __init__(self, cor, circunferencia, material):
         self.cor = cor
