@@ -28,9 +28,7 @@ if 200 <= response.status_code <= 299:
     print('-'*30)
 
     for aluno in response_data:
-        print(aluno['nome'])
-        print(aluno['sobrenome'])
-        print(aluno['email'])
+        print(aluno)
         print('-'*30)
 
 else:
