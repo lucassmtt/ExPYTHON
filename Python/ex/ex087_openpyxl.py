@@ -1,4 +1,5 @@
 from openpyxl import *
+from openpyxl import load_workbook
 
 wb = load_workbook('planilha.xlsx')
 ws = wb.active
@@ -23,8 +24,6 @@ total_de_vendas_4 = ws['C5'].value
 # print([vendedor_3.value], filiacao_3.value, [total_de_vendas_3.value])
 # print([vendedor_4.value], filiacao_4.value, [total_de_vendas_4])
 
-print(col_range)
-
 # nova_celula = ws['C6']
 #
 # tot_vendas = 0
@@ -32,4 +31,3 @@ print(col_range)
 #     tot_vendas += int(ws[f'C{i}'].value)
 #
 # ws['C6'] = tot_vendas
-#
