@@ -5,7 +5,7 @@ from PySide6.QtWidgets import (
     QVBoxLayout, QMainWindow
 )
 
-from qdarktheme import load_stylesheet
+# from qdarktheme import load_stylesheet
 
 
 def callback():
@@ -51,6 +51,6 @@ class Window(QMainWindow):
 
 
 app = QApplication()
-app.setStyleSheet(load_stylesheet('light'))
+# app.setStyleSheet(load_stylesheet('light'))
 janela = Window()
 janela.show()
