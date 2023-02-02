@@ -22,4 +22,4 @@ while True:
     sleep(2)
     pyautogui.moveTo(1150, 430)
     pyautogui.click()
-    cont += 1twitter.com
+    # cont += 1twitter.com

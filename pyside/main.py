@@ -30,11 +30,15 @@ class Window(QMainWindow):
         self.label.setAlignment(Qt.AlignCenter)
 
         botao = QPushButton('Botão!')
+        botao_new_window = QPushButton('Criar nova janela')
 
         botao.clicked.connect(self.muda_label)
+        botao_new_window.clicked.connect(self.cria_janela)
+
 
         layout.addWidget(self.label)
         layout.addWidget(botao)
+        layout.addWidget(botao_new_window)
 
         base.setLayout(layout)
 
@@ -47,8 +51,14 @@ class Window(QMainWindow):
         arquivo_menu.addAction(action)
 
     def muda_label(self):
-        self.label.setText('Clicado!!!!')
+        if self.label.text() == 'Deixe um like!':
+            self.label.setText('Clicado!!!!')
+        else:
+            self.label.setText('Deixe um like!')
 
+    def cria_janela(self):
+        nova_janela = Window()
+        nova_janela.show()
 
 app = QApplication()
 app.setStyleSheet(load_stylesheet('light'))
