@@ -16,7 +16,4 @@ chrome_browser = webdriver.Chrome(
 )
 
 sleep(2)
-chrome_browser.get('https://www.google.com')
-sleep(1)
-chrome_browser.get('https://linkedin.com')
-chrome_browser.close()
+chrome_browser.
