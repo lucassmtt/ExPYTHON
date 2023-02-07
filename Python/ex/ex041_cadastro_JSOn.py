@@ -42,6 +42,7 @@ while resp != 3:
         3 == Sair
 
     ''')
+
     resp = is_number(': ')
     if resp == 1:
         nome = is_string('Digite seu nome: ', aviso='Digite seu nome corretamente, por favor: ')
@@ -65,6 +66,7 @@ while resp != 3:
         pessoa.setdefault('notas', notas)
         pessoas.setdefault(f'pessoa_id_{identificador}', pessoa)
         identificador += 1
+
         with open('ex041_cadastro_usando.json', 'a+') as arquivo:
             json.dump(pessoas, arquivo, ensure_ascii=False, indent=2)
 
