@@ -15,5 +15,4 @@ chrome_browser = webdriver.Chrome(
     options=chrome_options,
 )
 
-sleep(2)
-chrome_browser.
+chrome_browser.get('https://github.com/lucassmtt')
