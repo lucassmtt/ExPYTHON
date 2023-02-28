@@ -16,3 +16,5 @@ chrome_browser = webdriver.Chrome(
 )
 
 chrome_browser.get('https://github.com/lucassmtt')
+chrome_browser.maximize_window()
+sleep(10)
