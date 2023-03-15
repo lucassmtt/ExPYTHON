@@ -1,3 +1,18 @@
+"""
+Descrição do exercício:
+
+Implemente um programa para controlar o numero de crianças em uma creche.
+Para isso solicite o número de turmas, e para CADA TURMA solicite o número da sala,
+o numero de alunos matriculados e sexo de cada uma das crianças
+(M – Masculino, F – Feminino), valide as entradas. Calcule e apresente em tela:
+a. Número total de crianças na creche.
+b. Média de alunos considerando todas as salas.
+c. O numero da sala com o maior número de meninos.
+d. O numero da sala com o menor número de meninas.
+
+"""
+
+
 class Creche:
     def __init__(self, nome_creche):
         self.quantidade_de_turmas = None
