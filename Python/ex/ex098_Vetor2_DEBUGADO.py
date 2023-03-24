@@ -33,22 +33,29 @@ for i in range(5):
 
     vetor_y[i] = num
 
+
 for i in range(5):
+    #Pega o resultado A
     if vetor_y[i] not in vetor_x:
         resultado_a[i] = vetor_x[i] + vetor_y[i]
 
     else:
         resultado_a[i] = 'Valor igual'
 
+    #Pega o resultado B
     if vetor_x[i] not in vetor_y:
         resultado_b[i] = vetor_x[i]
 
+    #Pega o resultado C
     resultado_c[i] = vetor_x[i] + vetor_y[i]
 
+    #Pega o resultado D
     resultado_d[i] = vetor_x[i] * vetor_y[i]
 
+    #Pega o resultado E
     if vetor_x[i] == vetor_y[i]:
         resultado_e[i] = vetor_x[i] + vetor_y[i]
+
 
 print('-' * 50)
 
