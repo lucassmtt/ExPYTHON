@@ -13,3 +13,4 @@ a quantidade de peças * o preço da peça.
 
 """
 
+qtd_de_pecas = int(input('Digite quantas peças foram vendidas: '))
