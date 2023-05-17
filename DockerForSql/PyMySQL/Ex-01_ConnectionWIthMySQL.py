@@ -15,4 +15,3 @@ with connection:
     with connection.cursor() as cursor:
         # apply the SQL
         ...
-    

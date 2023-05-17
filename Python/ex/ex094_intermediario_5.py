@@ -12,3 +12,4 @@ c. O total de horas de propagandas vinculadas.
 d. O total de horas de musicas vinculadas.
 e. O percentual que o total de horas de propagandas representa do numero total de horas que a rádio fica no ar
 """
+
