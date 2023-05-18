@@ -34,5 +34,6 @@ for i in range(number_of_pedidos):
             amount = int(input("Sent the amount of products with this code: "))
             price = items.get("price")
             total_price += amount * price
+            
 
 print(f"The total value is {total_price}!")
